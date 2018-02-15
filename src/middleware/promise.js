@@ -13,4 +13,6 @@ export default (store) => (next) => (action) => {
 		//need to re-dispatch action if its is modified in any way
 		store.dispatch(newAction);
 	});
+
+	return action.payload;
 };
