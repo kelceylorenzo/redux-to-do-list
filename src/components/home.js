@@ -9,7 +9,6 @@ class Home extends Component {
 	}
 
 	render() {
-		console.log('props: ', this.props);
 		const listItems = this.props.todoList.map((item, index) => {
 			return (
 				<li className="list-group-item" key={index}>
