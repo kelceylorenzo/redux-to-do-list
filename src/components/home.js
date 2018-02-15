@@ -13,7 +13,7 @@ class Home extends Component {
 		const listItems = this.props.todoList.map((item, index) => {
 			return (
 				<li className="list-group-item" key={index}>
-					{item.title}
+					<Link to={`item/${item._id}`}>{item.title}</Link>
 				</li>
 			);
 		});

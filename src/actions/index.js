@@ -13,6 +13,15 @@ export function getAllToDos() {
 	};
 }
 
+export function getOneItem(id) {
+	const request = axios.get(`${BASE_URL}/todos/${id + API_KEY}`);
+
+	return {
+		type: types.GET_ONE_ITEM,
+		payload: request
+	};
+}
+
 export function addItem(item) {
 	const request = axios.post(`${BASE_URL}/todos${API_KEY}`, item);
 
