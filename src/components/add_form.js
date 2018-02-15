@@ -18,7 +18,6 @@ class AddForm extends Component {
 	handleAddItem(values) {
 		console.log('Adding item: ', values);
 		this.props.addItem(values).then(() => {
-			console.log('it worked');
 			this.props.history.push('/');
 		});
 	}

@@ -13,6 +13,11 @@ export default function(state = DEFAULT_STATE, action) {
 				...state,
 				all: action.payload.data.todos
 			};
+		case types.GET_ONE_ITEM:
+			return {
+				...state,
+				single: action.payload.data.todo
+			};
 		default:
 			return state;
 	}
