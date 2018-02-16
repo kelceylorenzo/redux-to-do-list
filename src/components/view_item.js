@@ -31,17 +31,31 @@ class ViewItem extends Component {
 						Go Back
 					</Link>
 				</div>
-				<h3>Title: {this.props.item.title}</h3>
-				<p>ID:{this.props.match.params.id}</p>
-				<p>Details: {this.props.item.details}</p>
-				<p>Create: {date}</p>
-				<p>Status: {this.props.item.complete ? 'Complete' : 'Incomplete'}</p>
-				<button type="button" onClick={() => this.handleComplete(this.props.item._id)}>
-					Complete
-				</button>
-				<button type="button" onClick={() => this.handleDelete(this.props.item._id)}>
-					Delete
-				</button>
+				<div className="row justify-content-center">
+					<div className="card m-4 p-5">
+						<div className="card-body text-center">
+							<h3>Title: {this.props.item.title}</h3>
+							<p>ID:{this.props.match.params.id}</p>
+							<p>Details: {this.props.item.details}</p>
+							<p>Date Create: {date}</p>
+							<p>Status: {this.props.item.complete ? 'Complete' : 'Incomplete'}</p>
+							<button
+								className="btn btn-outline-success"
+								type="button"
+								onClick={() => this.handleComplete(this.props.item._id)}
+							>
+								Complete
+							</button>
+							<button
+								className="btn btn-outline-danger ml-3"
+								type="button"
+								onClick={() => this.handleDelete(this.props.item._id)}
+							>
+								Delete
+							</button>
+						</div>
+					</div>
+				</div>
 			</div>
 		);
 	}
